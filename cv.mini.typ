@@ -5,6 +5,19 @@
 
 #show heading: set text(font: "Linux Biolinum")
 
+// #show raw: it => box(
+//     fill: luma(220),
+//     outset: 2pt,
+//     radius: 3pt,
+//     stroke: none
+// )[
+//     #text(font: "Iosevka")[
+//         #it       
+//     ]
+// ]
+
+#show raw: set text(font: "Iosevka")
+
 #show link: underline
 
 // Uncomment the following lines to adjust the size of text
@@ -15,7 +28,8 @@
 
 // Feel free to change the margin below to best fit your own CV
 #set page(
-  margin: (x: 0.9cm, y: 1.3cm),
+    margin: (x: 0.9cm, y: 1.3cm),
+    numbering: "1/1"
 )
 
 #set par(justify: true)
@@ -59,10 +73,9 @@
   gutter: 1em,
   align: (left + horizon, right + horizon, right + horizon),
   [
-    = #text(stroke: 0.02em)[林德松] | 后端工程师（Rust / Web 系统）
+    = #text(stroke: 0.02em)[林德松] | Rust 后端工程师（Web 系统 / 性能优化）
     #v(0.5em)
-    lindesong666\@163.com | #link("https://github.com/shinoda4")[github.com/shinoda4] \
-    #link("https://desonglll.xyz")[desonglll.xyz]
+    \u{f0ebb} lindesong666\@163.com | #link("https://github.com/shinoda4")[\u{ea84} github.com/shinoda4] ｜ #link("https://desonglll.xyz")[desonglll.xyz]
   ],
   [
     #box(height: 3em)[#tiaoma.qrcode("https://desonglll.lindesong666.deno.net/")]
@@ -73,84 +86,92 @@
     //     #image("avatar.jpg", fit: "cover")
     //   ]
     // ]
+
 )
+`Rust Web` 服务开发，具备生产环境部署与长期维护经验。\
+曾将 `Django` 计算模块重写为 `Rust FFI` 模块，万级数据处理由秒级优化至毫秒级。\
+负责接口设计、`PostgreSQL` 数据建模、并发一致性处理与性能优化，系统已真实上线运行。\
 
-硕士在读（软件工程）｜2 年企业级 Web 系统开发经验\
-主攻 Rust 后端、Web 服务架构与 PostgreSQL 数据建模\
-可独立完成：接口设计 → 数据库建模 → 部署上线 → 性能优化\
-
-== 教育背景
+== #text(font: "Symbols Nerd Font")[\u{f4cd} 教育背景]
 #chiline()
 
 #link("http://www.qfnu.edu.cn/")[*曲阜师范大学（研二在读）*] #h(1fr) 2024/09 -- 2027/06 \
 软件工程 #h(1fr) 硕士学位 \
-// - 参与一项#p_underline()[*国家自然科学基金*]项目的申请书撰写
+- 主修课程：机器学习、深度学习、高级软件开发
+- 参与一项#p_underline()[*国家自然科学基金*]项目的申请书撰写
 
 #link("http://www.qfnu.edu.cn/")[*曲阜师范大学*] #h(1fr) 2020/09 -- 2024/06 \
 软件工程 #h(1fr) 学士学位 \
-- 主修课程：数据结构与算法、Java程序设计、Python程序设计、计算机组成原理
+- 主修课程：数据结构与算法、`Java`程序设计、`Python`程序设计、计算机组成原理
 
-== 技术能力
+== #text(font: "Symbols Nerd Font")[\u{f4cd} 技术能力]
 #chiline()
-后端开发（主方向）
-- Rust：基于 Actix 构建异步 Web 服务，熟悉 async/await、任务调度、共享状态管理（Arc/Mutex/RwLock）、中间件设计与错误处理
-- Web API：RESTful 与 GraphQL 接口设计、认证鉴权（JWT）、分页与过滤策略（cursor/keyset pagination）
-数据库与数据建模
-- PostgreSQL：关系模型设计、索引设计（B-Tree/复合索引）、事务与并发一致性理解
-- 熟悉常见反模式（N+1 查询、过度 JOIN）及其优化
-工程与部署
-- Linux 环境部署、Nginx 反向代理、Docker 容器化部署
-- Git 协作开发流程（feature branch / PR / code review）
-- 基础日志与错误排查，具备线上问题定位经验
-其他语言与框架（辅助能力）
-- Python（脚本与工具）、TypeScript（前端交互开发）
-- 使用过 Django / Spring Boot / SvelteKit / React / Vue
+#columns(2, gutter: 10pt)[
+#text(stroke: 0.02em)[后端开发（主方向）]
+- 使用 `Rust` 为主，并在 `Django / Rails` 项目中开发与维护 Web 服务
+- 完成接口编写、业务逻辑实现与调试上线，参与功能迭代与缺陷修复
+- 实现鉴权、数据查询、评论与文件上传等常见业务功能，并根据运行情况进行问题定位与调整
+#text(stroke: 0.02em)[数据库与数据建模]
+- 根据业务需求设计数据表结构并编写查询
+- 调整查询方式与索引以改善接口响应速度
+- 排查并修复数据不一致与异常记录
+#colbreak()
+#text(stroke: 0.02em)[系统部署与问题排查]
+- `Linux` 服务器部署与 `Nginx` 配置
+- 基于日志进行线上问题定位与慢接口排查
+#text(stroke: 0.02em)[技术栈]
+- `Rust · Python · PostgreSQL · Linux · Nginx · Git · Docker · TypeScript`
+- 接触过：`Django · Rails · Spring · Gin · Next.js · SvelteKit · React · Vue`
+#text(stroke: 0.02em)[日常工具]
+- `Emacs, Vim, Git, Tmux`
+]
 
-== 工作经历
+== #text(font: "Symbols Nerd Font")[\u{f4cd} 实习经历]
 #chiline()
 
-*山东顺德机械配件有限公司* #h(1fr) 2022/02 -- 2024/06 \
+#text(stroke: 0.02em)[*山东日照顺德机械配件有限公司*] #h(1fr) 2022/02 -- 2024/06 \
 全栈开发工程师 #h(1fr) 山东省日照市 \
-- 库存对账性能优化：针对原 Django 实现的库存对账在大量订单下响应缓慢的问题，将高频计算逻辑拆分为 *Rust* 编写的数据处理模块，通过 FFI 调用集成，使万级记录处理时间由秒级降至毫秒级。
-- 线上系统维护与问题排查：负责接口异常、数据错误等线上问题定位，结合日志与数据库排查数据不一致问题，并修复历史脏数据，有效保障了业务系统的连续稳定运行。
-- 数据库建模与查询优化：设计机械配件 *BOM* 数据结构，重构多表关联查询与索引，减少了全表扫描，显著降低了接口响应时间与数据库负载。
-- 网站架构迁移：将公司展示站点由 React 单页应用迁移至 *SvelteKit SSR* 架构，优化搜索引擎收录（SEO）与首屏加载速度，并独立完成 *Nginx + Linux* 环境的部署上线。
+参与公司内部业务系统开发与长期维护，负责库存、订单与产品数据相关模块，处理真实生产数据与线上运行问题。
+- 性能瓶颈定位与优化（`Rust FFI`）：库存对账接口在订单量增长后响应明显变慢，通过日志与数据分析定位为高频计算逻辑耗时，将该部分重写为 `Rust` 数据处理模块并通过 `FFI` 接入 `Django`，提高记录处理时间并稳定运行在线上环境。
+- 线上故障排查与数据修复：处理接口异常与数据不一致问题，结合应用日志与数据库记录定位错误来源，修复历史脏数据并恢复业务可用性。
+- 数据库建模与查询优化：为机械配件 `BOM` 关系设计数据结构与索引方案，重构多表关联查询，减少全表扫描并降低数据库负载。
+- 系统维护与部署：负责服务部署与运行环境维护，使用 `Linux` 与 `Nginx` 保障系统对内稳定访问。
 
-*江苏传智播客教育科技股份有限公司 (济南)* #h(1fr) 2023/12 -- 2024/02 \
+#text(stroke: 0.02em)[*江苏传智播客教育科技股份有限公司 (济南) *] #h(1fr) 2023/12 -- 2024/02 \
 后端开发实践 #h(1fr) 山东省济南市 \
-- 企业级架构开发：在 *SpringMVC + MyBatis* 架构下参与业务模块实现，按照接口文档完成功能开发与联调，深入理解分层架构与业务代码组织方式。
-- 前后端协作与调试：配合前端完成接口联调与问题定位，参与接口文档编写、系统测试与缺陷修复流程，保障模块交付质量。
-- 敏捷开发实践：深度参与需求评审、代码 Review 与每日站会，熟悉 *Git* 协作开发、分支管理与团队规范化交付流程。
-== 项目经历
+在 `SpringMVC + MyBatis` 架构下参与业务模块开发与接口联调，熟悉分层结构、接口协作流程与代码评审规范，并参与测试与缺陷修复流程。
+
+#pagebreak()
+== #text(font: "Symbols Nerd Font")[\u{f4cd} 项目经历]
 
 #chiline()
 
-*Shunde Get 企业产品展示与检索网站* #h(1fr) 2023/02 -- 2024/06 \
+#text(stroke: 0.02em)[*Shunde Get | 企业产品展示与检索系统（独立开发与重构）*] #h(1fr) 2023/02 -- 2024/06 \
 全栈开发 / 独立重构 #h(1fr) https://sdsdsd.online \
-为机械配件公司构建面向客户的产品展示与检索网站，负责从后端数据处理到前端交互及部署的完整交付。
-- 架构重构：将原 React 单页应用迁移至 SvelteKit SSR 架构，改善搜索引擎收录与首屏加载体验，并完成 Linux 服务器部署。
-- 配件数据处理：针对数千种型号配件，编写 TypeScript 数据处理脚本与 Rust 数据处理模块，生成结构化产品数据以支持前端检索与筛选。
-- 查询与筛选设计：设计参数化搜索接口与筛选逻辑，支持按型号、规格与类别快速定位产品。
-- 数据库与接口优化：为复杂配件参数关系设计 PostgreSQL 查询结构，减少重复查询与冗余数据传输。
-- 资源加载优化：对大量产品图片进行压缩与尺寸处理，降低移动端弱网环境下页面加载时间。
+为机械配件公司构建并长期维护的线上业务系统，负责数据处理、接口设计、数据库建模与服务器部署的完整交付，系统面向真实客户持续运行。
+- 系统重构与部署：将原 `React` 单页站点重构为 `SvelteKit SSR` 架构，并完成 `Linux + Nginx` 部署，使站点可被搜索引擎索引并稳定对外提供访问。
+- 数据建模与结构化处理：针对数千种型号配件存在的规格差异，设计结构化产品数据格式，并使用 `TypeScript` 脚本与 `Python` 数据处理模块生成可检索数据源。
+- 数据库设计与查询优化：为复杂配件参数关系设计 `PostgreSQL` 表结构与查询方式，减少重复查询与冗余数据读取，提升检索接口响应效率。
+- 检索接口设计：实现参数化搜索接口，支持按型号、规格与类别组合筛选，保证查询结果稳定与可扩展。
+- 资源与访问优化：对大量产品图片进行压缩与尺寸处理，降低移动端弱网环境下加载时间，提高实际访问可用性。
 
-*推校园 Tweet (高并发校园社交平台)* #h(1fr) 2023/12 -- 2024/06 \
+#text(stroke: 0.02em)[*推校园 Tweet | (高并发校园社交平台)*] #h(1fr) 2023/12 -- 2024/06 \
 核心开发者 / 架构设计 #h(1fr) https://github.com/desonglll/ax.git \
-独立设计并实现完整 Web 后端服务，包含用户、动态、评论、点赞与图片上传等功能模块，作为真实可运行系统长期维护。
-- 后端架构设计：使用 Rust（Actix Web）构建异步 Web 服务，拆分路由层、业务层与数据访问层，设计统一错误处理与中间件体系（认证、日志、跨域）。
-- 认证与安全：实现基于 JWT 的鉴权机制与刷新策略，避免未授权访问与重复登录状态问题，并在上传接口中增加类型与大小校验以防止恶意请求。
-- 数据库与一致性：为帖子、评论与点赞设计关系模型与索引结构，处理并发点赞写入冲突，避免计数不一致问题。
-- 分页与查询性能优化：将基于 OFFSET/LIMIT 的分页改为游标分页（keyset pagination），在数据量增长后保持稳定响应时间。
-- 图片上传与资源管理：实现文件上传与访问路径管理，避免重复上传与异常文件导致的存储浪费。
-- 接口调试与性能分析：通过日志与压测工具定位慢接口与不必要查询，优化后显著降低接口响应延迟。
+独立设计并长期维护的真实运行 Web 后端系统，提供用户、动态、评论、点赞与图片上传服务，重点解决数据增长后的查询性能与并发一致性问题。
+- 后端架构设计：基于 `Actix Web` 构建异步服务，划分路由层 / 业务层 / 数据访问层，统一错误处理与中间件体系（鉴权、日志、跨域），保证接口可维护性与可扩展性。
+- 数据库建模与索引设计：为帖子、评论、点赞关系设计 `PostgreSQL` 表结构与复合索引，避免多表查询产生的全表扫描，降低高频接口数据库负载。
+- 并发一致性处理：在点赞与评论计数场景中处理并发写入冲突，通过事务与约束设计避免计数错误与重复写入问题。
+- 分页性能优化：当数据量增长后 `OFFSET/LIMIT` 查询明显变慢，将时间线接口改为 `Keyset Pagination`（游标分页），稳定接口响应时间。
+- 鉴权与安全：实现基于 `JWT` 的访问与刷新机制，并在上传接口增加类型与大小校验，防止异常请求与无效文件写入。
+- 问题定位与性能分析：通过日志与压测定位慢接口，减少冗余查询与重复读取，优化后显著降低接口延迟。
 
-== 荣誉与科研成果
+== #text(font: "Symbols Nerd Font")[\u{f4cd} 竞赛荣誉]
 #chiline()
 
 *#text(font: "Symbols Nerd Font")[\u{ebe9}]  软件著作权 (独立/核心作者)*
-- *锈羽——基于Rust的全栈推文系统* (2026SR0178137) #h(1fr) 2026/01
-- *e和园校园服务管理平台* (2023SR0235691) #h(1fr) 2023/02
-- *党团助手——校园党建平台* (2023SR0137018) #h(1fr) 2023/01
+- *锈羽——基于Rust的全栈推文系统* (`2026SR0178137`) #h(1fr) 2026/01
+- *e和园校园服务管理平台* (`2023SR0235691`) #h(1fr) 2023/02
+- *党团助手——校园党建平台* (`2023SR0137018`) #h(1fr) 2023/01
 
 *#text(font: "Symbols Nerd Font")[\u{ee22}] 竞赛获奖*
 #grid(
