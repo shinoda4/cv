@@ -6,14 +6,14 @@
     numbering: "1/1"
 )
 #set text(
-    font: ("Linux Biolinum", "Libertinus Serif", "Kaiti SC", "Noto Serif CJK SC", "Symbols Nerd Font"),
+    font: ("Linux Biolinum", "Libertinus Serif", "Kaiti SC", "Adobe Heiti Std", "Noto Serif CJK SC", "Symbols Nerd Font"),
     size: 12pt,          
     lang: "zh",          
     region: "cn"
 )
-#show heading.where(level: 1): set text(size: 22pt, font: ("Linux Biolinum", "Libertinus Serif", "Kaiti SC", "Noto Sans CJK SC", "Symbols Nerd Font"))
-#show heading.where(level: 2): set text(font: ("Linux Biolinum", "Libertinus Serif", "Heiti SC", "Noto Sans CJK SC", "Symbols Nerd Font"))
-#show heading.where(level: 3): set text(font: ("Linux Biolinum", "Libertinus Serif", "Kaiti SC", "Noto Serif CJK SC", "Symbols Nerd Font"))
+#show heading.where(level: 1): set text(size: 22pt, font: ("Linux Biolinum", "Libertinus Serif", "Kaiti SC", "Adobe Heiti Std", "Noto Serif CJK SC", "Symbols Nerd Font"))
+#show heading.where(level: 2): set text(font: ("Linux Biolinum", "Libertinus Serif", "Heiti SC", "Adobe Heiti Std","Noto Sans CJK SC", "Symbols Nerd Font"))
+#show heading.where(level: 3): set text(font: ("Linux Biolinum", "Libertinus Serif", "Kaiti SC", "Adobe Heiti Std", "Noto Serif CJK SC", "Symbols Nerd Font"))
 // #show heading.where(level: 3): set block(above: 0.5em, below: 0.8em)
 
 #let lang_title(icon, it) = {
