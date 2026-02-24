@@ -1,0 +1,11 @@
+#+title: Resume
+#+author: Shinoda4
+#+date: 2026-02-24
+
+** Academic Service                                                      :en:
+
+- Official Reviewer, IJCNN 2026 (WCCI, IEEE CIS flagship conference)
+
+** 学术服务                                                              :zh:
+
+- 审稿人，国际神经网络联合会议（IJCNN 2026，WCCI，IEEE计算智能学会）
