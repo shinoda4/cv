@@ -27,7 +27,7 @@
 
 #set par(justify: true)
 // #show raw: set text(font: ("CaskaydiaCove NF","Linux Libertine Mono O"))
-#show raw: set text(font: ("TX-02 Retina", "DejaVu Sans Mono"))
+#show raw: set text(font: ("TX-02", "DejaVu Sans Mono"))
 #show link: underline
 #let p_underline(it) = {
     //  set text(top-edge: "bounds", bottom-edge: "bounds")
@@ -90,9 +90,10 @@
 - #p_underline()[*Official Reviewer*]，国际神经网络联合会议（IJCNN 2026，WCCI，IEEE 计算智能学会）
 // - Official Reviewer, IJCNN 2026 (WCCI, IEEE CIS flagship conference)
 - 参与一项#p_underline()[*国家自然科学基金*]项目的申请书撰写
-- 课程：软件体系结构、软件建模与需求工程、分布式系统
+- 课程：软件体系结构、软件建模与需求工程、分布式系统、深度学习
 === 曲阜师范大学 软件工程 *学士*学位 #h(1fr) 2020/09 -- 2024/06
 - 课程：C/C++、数据结构、计算机组成原理、操作系统、计算机网络
+- 曾担任学院团委学生会#p_underline()[*副主席*]兼组织部部长
 == \u{f0b1} 实习经历
 #style.chiline()
 === 山东日照顺德机械配件有限公司 #h(1fr) 2022/02 -- 2023/06
@@ -145,7 +146,7 @@
 - 使用 Tmux、Zsh 与脚本提升终端开发效率。
 - 基于 Docker 与 Unix/Linux 环境进行一致化开发与部署。
 
-=== 学术与社会服务
+== \u{ed99} 学术与社会服务
 #style.chiline()
 - Official Reviewer, IJCNN 2026 (WCCI, IEEE CIS flagship conference)
 
@@ -158,6 +159,7 @@
 - 党团助手——校园党建平台 (`2023SR0137018`) #h(1fr) 2023/01
 
 === \u{ee22} 竞赛获奖
+- 第五届中国移动“梧桐杯”数智创新大赛 #sym.dot.op 山东赛区第二名 (国赛入围) #h(1fr) 2026/02
 - 第十五届全国大学生数学竞赛 #sym.dot.op 山东赛区一等奖 (国赛入围) #h(1fr) 2023/11
 - 第二十届山东省大学生软件设计大赛 #sym.dot.op 省二等奖 (党团助手项目) #h(1fr) 2022/11
 - 第二十届山东省大学生软件设计大赛 #sym.dot.op 省二等奖 (济续游宁项目) #h(1fr) 2022/11
@@ -165,8 +167,13 @@
 
 === \u{f1a82} 综合荣誉
 - 2024届山东省优秀毕业生 #h(1fr) 2024/01
-- 研究生学业奖学金 (2024) | 本科生学业奖学金 (2021, 2022) #h(1fr) 2021 -- 2024
+- 2024届曲阜师范大学优秀毕业生 #h(1fr) 2023/11
+- 研究生学业奖学金 (2024) | 本科生学业奖学金 (2021, 2022, 2023) #h(1fr) 2021 -- 2024
 - 校级优秀团员 #h(1fr) 2022/10
+
+== \u{f1ab} 语言水平
+#style.chiline()
+- 大学英语 CET6
 
 #v(1fr)
 // Feel free to change the date below to the last time you updated your CV

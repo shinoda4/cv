@@ -1,8 +1,20 @@
+#+title: Readme for my resume repository
+#+author: Tesung-Lin
+#+date: 2026-02-24
+
+#+latex: \newpage
+
 ** Clone
 
 #+begin_src shell
-git clone git@github.com:shinoda4/cv.git
-git clone https://github.com:shinoda4/cv.git
+  git clone --recursive git@github.com:shinoda4/cv.git
+  git clone --recursive https://github.com:shinoda4/cv.git
+#+end_src
+
+** Clone the submodule
+
+#+begin_src shell
+  git submodule update
 #+end_src
 
 ** Install Typst
@@ -25,9 +37,33 @@ typst watch resume.typ --font-path=fonts --open
 
 ** Font
 
+The font I used is:
+
+- Linux Biolinum
+- Libertinus Serif
+- Kaiti SC
+- Heiti SC
+- TX-02
+- Symbols Nerd Font
+
+*** macOS
+
+Just clone the [[https://github.com/shinoda4/typst-fonts.git][typst-fonts]] repository or download the following fonts from Github directly and install them.
+
+- [[https://github.com/shinoda4/typst-fonts/blob/main/SymbolsNerdFont-Regular.ttf][SymbolsNerdFont-Regular.ttf]]
+- [[https://github.com/shinoda4/typst-fonts/raw/refs/heads/main/LinLibertine/LinBiolinum_R.otf][LinBiolinum_R.otf]]
+- [[https://github.com/shinoda4/typst-fonts/raw/refs/heads/main/LinLibertine/LinLibertine_R.otf][LinLibertine_R.otf]]
+- [[https://github.com/shinoda4/typst-fonts/raw/refs/heads/main/TX-02/TX-02-Regular.otf][TX-02-Regular.otf]]
+
 *** Linux
 
 #+begin_src shell
   sudo apt update
   sudo apt install fonts-noto-cjk fonts-wqy-microhei
 #+end_src
+
+*** Windows
+
+Maybe the fonts we can used in Windows are quite different.
+
+I will fix that when I’m able to use Windows.
