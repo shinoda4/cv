@@ -1,10 +1,6 @@
-
-.DS_Store
-
+*.html
 *.pdf
-
-*~
-
 *.tex
-
+*~
+.DS_Store
 fonts
