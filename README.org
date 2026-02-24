@@ -2,7 +2,7 @@
 
 #+begin_src shell
 git clone git@github.com:shinoda4/cv.git
-git clone https://github.com:shinoda4/cv.git  
+git clone https://github.com:shinoda4/cv.git
 #+end_src
 
 ** Install Typst
@@ -25,4 +25,9 @@ typst watch resume.typ --font-path=fonts --open
 
 ** Font
 
+*** Linux
 
+#+begin_src shell
+  sudo apt update
+  sudo apt install fonts-noto-cjk fonts-wqy-microhei
+#+end_src
