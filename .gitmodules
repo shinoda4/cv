@@ -1,0 +1,3 @@
+[submodule "typst-fonts"]
+	path = typst-fonts
+	url = https://github.com/shinoda4/typst-fonts.git
