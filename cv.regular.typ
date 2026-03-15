@@ -37,6 +37,23 @@
     h(1fr)
     text("Last Updated in " + date, fill: color.gray)
 }
+
+#show heading.where(level: 3): it => {
+    set block(above: 0.8em, below: 0.8em)
+  block(
+      fill: rgb("#f6f7f9"),
+      inset: (y: 5pt, x: 5pt),
+      radius: 4pt,
+  )[
+    #box(
+      stroke: (left: 3pt + rgb("#6b7280")),
+      inset: (left: 4pt)
+    )[
+      #set text(weight: "semibold")
+      #it.body
+    ]
+  ]
+}
 // }
 // #grid(
 //     columns: (1fr, auto, auto),
@@ -84,19 +101,65 @@
 
 )
 
+== \u{efcc} 技术栈
+
+- 编程语言：Python, Rust, Java, C/C++, Go, Ruby, PHP
+- Web 技术：React, Vue, Svelte | Django, SpringBoot, Larval, Ruby on Rails, Phoenix
+- 数据库：PostgreSQL, Redis
+- 工程工具：Docker, Tmux, Git, Shell
+- 开发环境：macOS, Linux
+
 == \u{ef23} 教育背景
 #style.chiline()
 === 曲阜师范大学 软件工程 *硕士*学位（在读） #h(1fr) 2024/09 -- 2027/06
-- #p_underline()[*Official Reviewer*]，国际神经网络联合会议（IJCNN 2026，WCCI，IEEE 计算智能学会）
+- #p_underline()[*Official Reviewer 审稿人*]，国际神经网络联合会议（IJCNN 2026，WCCI，IEEE 计算智能学会）
 // - Official Reviewer, IJCNN 2026 (WCCI, IEEE CIS flagship conference)
 - 参与一项#p_underline()[*国家自然科学基金*]项目的申请书撰写
 - 课程：软件体系结构、软件建模与需求工程、分布式系统、深度学习
 === 曲阜师范大学 软件工程 *学士*学位 #h(1fr) 2020/09 -- 2024/06
 - 课程：C/C++、数据结构、计算机组成原理、操作系统、计算机网络
 - 曾担任学院团委学生会#p_underline()[*副主席*]兼组织部部长
+
+== \u{efbe} 项目经历
+#style.chiline()
+
+=== AX (锈羽) —— 高性能社交媒体与内容分发系统 (Rust/React/PostgreSQL) #h(1fr) 2023/06 -- 2024/06
+*独立开发者* #h(1fr) 个人项目 (软件著作权 `2026SR0178137`)
+
+- 基于 **Rust (Actix-Web)** 构建高性能异步后端，使用 **PostgreSQL + Redis** 实现数据持久化与分布式 Session 管理，支持高并发社交互动场景。
+- 设计用户、推文、互动等复杂数据模型，并通过 **PostgreSQL Trigger** 实现热度指标（Engagement Rate）自动计算，将聚合统计逻辑下沉至数据库层。
+- 基于 **SQLx** 实现非阻塞数据库访问，开发多模态文件管理系统，支持公共/私有文件元数据管理与高并发流式传输。
+- 通过 **Actix Middleware + Redis** 实现身份认证机制，并使用 **Cargo Workspace + SQLx-CLI** 管理多模块代码与数据库迁移。
+
+=== 全栈电子商务订单管理系统 (Rails 8 Order System) #h(1fr) 2025/10 -- 2026/01
+*独立开发者* #h(1fr) 个人项目
+
+- 基于 **Ruby on Rails 8 + Hotwire (Turbo/Stimulus)** 构建高响应全栈系统，实现 SPA 级无刷新交互体验。
+- 使用 **AASM** 实现订单状态机，结合 **Active Record Callback + 事务** 确保库存扣减与恢复的强一致性。
+- 集成 **Solid Queue** 处理异步任务（如超时订单自动关闭），并通过 **Kamal + Docker** 实现零停机自动化部署。
+- 采用 **多级缓存策略** 优化商品页面性能，使核心页面渲染耗时降低 **40%**，并使用 **Brakeman** 进行安全审计。
+
+=== Themis —— 极简主义沉浸式专注计时器 (iOS/SwiftUI) #h(1fr) 2026/01 -- 2026/02
+*独立开发者* #h(1fr) 个人项目
+
+- 基于 **SwiftUI** 构建响应式界面，通过目标时间差计算与 `Text(timerInterval:)` 实现系统级帧同步倒计时，解决后台挂起导致的计时漂移问题。
+- 使用 **AVFoundation** 管理音频会话，实现“录音室静音”底噪与多应用音频混音；结合 **CoreHaptics** 提供沉浸式触觉反馈。
+- 设计带“宽限期”的连续专注（Streak）算法，在保证公平性的同时提升用户长期留存。
+- 采用 **UserDefaults + Codable** 构建轻量持久化层，实现任务历史与统计数据的毫秒级加载。
+
 == \u{f0b1} 实习经历
 #style.chiline()
-=== 山东日照顺德机械配件有限公司 #h(1fr) 2022/02 -- 2023/06
+
+=== 北京百晨科技有限公司 #h(1fr) 2025/12 -- 至今
+
+后端交付工程师 / 技术支持 #h(1fr) 北京市海淀区
+
+- *技术方案与招投标支撑*：深度参与政务/部队项目技术标书撰写，负责系统架构设计说明与技术可行性论证，确保技术方案满足高可靠、高安全性的业务需求。
+- *私有化部署与运维*：负责系统在涉密网络/隔离环境下的私有化部署工作，涉及物理服务器环境配置、容器化（Docker）镜像迁移及数据库初始化。
+- *需求分析与业务建模*：作为技术对接人，负责收集并抽象业务单位的特定需求，参与报名信息管理系统等内部工具的功能逻辑设计与数据模型梳理。
+- *系统稳定性保障*：负责交付后的线上故障排查与应急处理，通过编写 Shell 脚本自动化处理日志巡检与数据备份，提升现场部署效率 30% 以上。
+
+=== 山东日照顺德机械配件有限公司 #h(1fr) 2023/02 -- 2024/06
 
 后端开发工程师 #h(1fr) 山东省日照市
 
@@ -106,13 +169,13 @@
 - 线上故障排查与数据修复：处理接口异常与数据不一致问题，结合应用日志与数据库记录定位错误来源，修复历史脏数据并恢复业务可用性。
 - 运维部署： 基于 Nginx 实现静态资源加速与反向代理，配合 Systemd 管理 Django 服务进程，保障了公司内部系统 99.9% 的可用性。
 
-=== 江苏传智播客教育科技股份有限公司 (济南) #h(1fr) 2023/12 -- 2024/02
+// === 江苏传智播客教育科技股份有限公司 (济南) #h(1fr) 2023/12 -- 2024/02
 
-后端开发实践 #h(1fr) 山东省济南市
+// 后端开发实践 #h(1fr) 山东省济南市
 
-- 在 SpringMVC + MyBatis 架构下参与业务模块开发与接口联调，熟悉分层结构、接口协作流程与代码评审规范，并参与测试与缺陷修复流程。
+// - 在 SpringMVC + MyBatis 架构下参与业务模块开发与接口联调，熟悉分层结构、接口协作流程与代码评审规范，并参与测试与缺陷修复流程。
 
-== \u{f121} 专业技能
+== \u{e20f} 专业技能
 #style.chiline()
 
 // #lang_title("\u{e7a8}")[Rust & Actix Web & Axum & Rocket]
