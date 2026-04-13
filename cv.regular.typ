@@ -80,8 +80,11 @@
         = #box(baseline: 0.7em, image("rustacean-flat-happy.svg", height: 2em)) 林德松 Tesung Lin #box(baseline: 0.7em, image("Go.svg", height: 2em))
     ],
     [
-        #box(height: 4em)[#tiaoma.qrcode("https://desonglll.lindesong666.deno.net/")English Version]
+        #image("me.jpg", height: 8em)
     ]
+    // [
+    //     #box(height: 4em)[#tiaoma.qrcode("https://desonglll.lindesong666.deno.net/")English Version]
+    // ]
 )
 
 == \u{ef69} 个人信息
@@ -286,5 +289,7 @@
 
 #v(1fr)
 // Feel free to change the date below to the last time you updated your CV
-#lastupdated(datetime.today().display())
 
+#box(height: 4em)[#tiaoma.qrcode("https://desonglll.lindesong666.deno.net/")English Version]
+
+#lastupdated(datetime.today().display())
