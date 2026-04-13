@@ -103,7 +103,7 @@
 )
 
 == \u{efcc} 技术栈
-
+#style.chiline()
 - 编程语言：Python, Rust, Java, C/C++, Go, Ruby, PHP
 - Web 技术：React, Vue, Svelte | Django, SpringBoot, Larval, Ruby on Rails, Phoenix
 - 数据库：PostgreSQL, Redis
@@ -121,32 +121,6 @@
 - 课程：C/C++、数据结构、计算机组成原理、操作系统、计算机网络
 - 曾担任学院团委学生会#p_underline()[*副主席*]兼组织部部长
 
-== \u{efbe} 项目经历
-#style.chiline()
-
-=== AX (锈羽) —— 高性能社交媒体与内容分发系统 (Rust/React/PostgreSQL) #h(1fr) 2023/06 -- 2024/06
-*独立开发者* #h(1fr) 个人项目 (软件著作权 `2026SR0178137`)
-
-- 基于 **Rust (Actix-Web)** 构建高性能异步后端，使用 **PostgreSQL + Redis** 实现数据持久化与分布式 Session 管理，支持高并发社交互动场景。
-- 设计用户、推文、互动等复杂数据模型，并通过 **PostgreSQL Trigger** 实现热度指标（Engagement Rate）自动计算，将聚合统计逻辑下沉至数据库层。
-- 基于 **SQLx** 实现非阻塞数据库访问，开发多模态文件管理系统，支持公共/私有文件元数据管理与高并发流式传输。
-- 通过 **Actix Middleware + Redis** 实现身份认证机制，并使用 **Cargo Workspace + SQLx-CLI** 管理多模块代码与数据库迁移。
-
-=== 全栈电子商务订单管理系统 (Rails 8 Order System) #h(1fr) 2025/10 -- 2026/01
-*独立开发者* #h(1fr) 个人项目
-
-- 基于 **Ruby on Rails 8 + Hotwire (Turbo/Stimulus)** 构建高响应全栈系统，实现 SPA 级无刷新交互体验。
-- 使用 **AASM** 实现订单状态机，结合 **Active Record Callback + 事务** 确保库存扣减与恢复的强一致性。
-- 集成 **Solid Queue** 处理异步任务（如超时订单自动关闭），并通过 **Kamal + Docker** 实现零停机自动化部署。
-- 采用 **多级缓存策略** 优化商品页面性能，使核心页面渲染耗时降低 **40%**，并使用 **Brakeman** 进行安全审计。
-
-=== Themis —— 极简主义沉浸式专注计时器 (iOS/SwiftUI) #h(1fr) 2026/01 -- 2026/02
-*独立开发者* #h(1fr) 个人项目
-
-- 基于 **SwiftUI** 构建响应式界面，通过目标时间差计算与 `Text(timerInterval:)` 实现系统级帧同步倒计时，解决后台挂起导致的计时漂移问题。
-- 使用 **AVFoundation** 管理音频会话，实现“录音室静音”底噪与多应用音频混音；结合 **CoreHaptics** 提供沉浸式触觉反馈。
-- 设计带“宽限期”的连续专注（Streak）算法，在保证公平性的同时提升用户长期留存。
-- 采用 **UserDefaults + Codable** 构建轻量持久化层，实现任务历史与统计数据的毫秒级加载。
 
 == \u{f0b1} 实习经历
 #style.chiline()
@@ -155,9 +129,18 @@
 
 研发实习生 #h(1fr) 北京市海淀区
 
-- *BizyAir 云端插件开发*：参与 BizyAir 核心逻辑开发，通过构建云端 API 桥接层，使用户能够无缝调用硅基流动的异构算力集群，显著降低了本地显存压力（减少约 70%）。
-- *Diffusion Model 推理优化*：负责 Stable Diffusion 与 Flux 系列模型在云端的端到端优化。
-- *ComfyUI 生态集成*：独立开发并维护多项 ComfyUI 自定义节点；优化了多模型串联下的工作流调度逻辑，提升了复杂任务的稳定性。
+- *cce*: 开发 ComfyUI 环境管理与镜像打包系统，实现插件仓库批量克隆（setupVendor）
+  与多源依赖自动合并解析（gen_full_reqs），构建多阶段 GPU Docker 镜像（PyTorch 2.5/2.9 + CUDA 12.4），
+  使构建时间缩减约 40%；开发模型下载工具（downloadModels），支持 HuggingFace/ModelScope 双源与完整性校验。
+- *ComfyAgent*: 基于 FastAPI 开发 ComfyUI FAAS 网关，设计 Workflow 编排层
+  （请求重写/Jinja2 模板/输出后处理），构建模型权重多源下载与磁盘缓存系统，
+  实现对象存储抽象层（OSS/OneStore/S3）与三级健康探针（含队列深度感知），集成 SSE 流式推送与 Prometheus 监控。
+- *BizyDeploy*: 基于 Hydra/OmegaConf 开发 FaaS 云函数声明式部署 CLI，
+  设计 Pipeline 工作流引擎（链式编排+步骤间结果传递），实现跨环境配置合并与部署自动化，
+  开发支持请求缓存与动态 Action 分发的 FaaS API 客户端。
+- *BizyEngine*: 扩展 ComfyUI 服务端，开发社区模型/数据集管理 API 与 API Key 双来源认证，
+  集成第三方 AI 服务节点（GPT/Gemini/Kling/Sora 等），基于 MCP 实现 AI 对话协调器
+  串联 LLM 与图像生成工具，支持 SSE 流式对话与模型同步状态自动推送。
 
 === 北京百晨科技有限公司 #h(1fr) 2025/12 -- 2026/03
 
@@ -184,33 +167,87 @@
 
 // - 在 SpringMVC + MyBatis 架构下参与业务模块开发与接口联调，熟悉分层结构、接口协作流程与代码评审规范，并参与测试与缺陷修复流程。
 
+
+== \u{efbe} 项目经历
+#style.chiline()
+
+=== ComfyUI 云端推理网关与编排系统 (ComfyAgent / BizyEngine) #h(1fr) 2026/04 -- 至今
+*研发实习生* #h(1fr) 北京硅基流动科技
+
+- 基于 **aiohttp** 扩展 ComfyUI 服务端，开发社区模型/数据集管理 API 与 API Key 双来源认证，
+  集成 GPT/Gemini/Kling/Sora 等第三方 AI 服务节点。
+- 基于 **FastAPI** 构建 FAAS 网关，设计 Workflow 编排层（请求重写 / Jinja2 模板 / 输出后处理），
+  构建模型权重多源下载与磁盘缓存系统，实现对象存储抽象层（OSS / OneStore / S3）。
+- 基于 **MCP 协议** 开发 AI 对话协调器，串联 LLM 与图像生成工具，支持 SSE 流式对话与模型同步状态自动推送；
+  设计三级健康探针（含队列深度感知），集成 **Prometheus** 监控。
+
+=== ComfyUI 云环境管理与部署引擎 (CCE / BizyDeploy) #h(1fr) 2026/04 -- 至今
+*研发实习生* #h(1fr) 北京硅基流动科技
+
+- 设计多阶段 GPU Docker 镜像构建流程（PyTorch 2.5/2.9 + CUDA 12.4），开发插件仓库批量克隆
+  与依赖自动合并解析，构建时间缩减约 40%；实现 HuggingFace / ModelScope 双源模型下载与完整性校验。
+- 基于 **Hydra + OmegaConf** 开发 FaaS 声明式部署 CLI，设计 Pipeline 工作流引擎支持链式编排
+  与步骤间结果传递，实现跨环境配置合并与部署自动化。
+- 开发 FaaS API 客户端，支持请求级缓存与动态 Action 分发。
+// === ComfyUI 云端推理网关与编排系统 (BizyAir / ComfyAgent / BizyEngine) #h(1fr) 2026/04 -- 至今
+// *研发实习生* #h(1fr) 北京硅基流动科技
+
+// - 基于 **aiohttp** 扩展 ComfyUI PromptServer，实现社区模型/数据集全生命周期 API、API Key RSA 解密认证与 SHA-256 去重上传；
+//   设计 **SearchServiceRouter** 规则路由 + **BizyAirTrdApiBaseNode** 异步任务范式，透明接入十余种云端 AI 服务。
+// - 基于 **FastAPI** 构建 FAAS 网关，开发 **WorkflowRewriter** 注册表模式实现节点透明替换，配合 **Jinja2** 模板支持
+//   Workflow/Payload 双请求模式；设计三级健康探针（队列深度感知 Readiness）与 **SSE** 流式推送。
+// - 开发 **BizyBot** AI 对话协调器，基于 **MCP 协议** 实现多工具发现与路由，设计 **Coordinator** 编排 LLM 流式对话
+//   与工具调用循环，通过 asyncio 状态机与 Lock 保证流式连接生命周期安全。
+
+// === ComfyUI 云环境管理与部署引擎 (CCE / BizyDeploy) #h(1fr) 2026/04 -- 至今
+// *研发实习生* #h(1fr) 北京硅基流动科技
+
+// - 设计多阶段 GPU Docker 镜像构建流程，开发 **BizyDraft** 定制层：通过 aiohttp Middleware 实现 Route Hijacking
+//   （/view 远程流式代理、/upload OSS 直传、/prompt DryRun 验证）与 workflow I/O 叶子节点自动推断。
+// - 基于 **Hydra + OmegaConf** 开发声明式部署 CLI，设计 Pipeline 工作流引擎支持链式编排与跨步骤结果传递
+//   （`pipe.ctx` resolver）；开发 **FaasClient** API 客户端，基于 SHA-256 缓存与 `__getattr__` 动态 Action 分发。
+
+=== AX (锈羽) —— 全栈社交媒体与内容分发系统 (Rust/React/PostgreSQL) #h(1fr) 2023/06 -- 2024/06
+*独立开发者* #h(1fr) 个人项目 (软件著作权 `2026SR0178137`)
+
+- 基于 **Rust (Actix-Web)** 构建异步后端，使用 **SQLx** 实现编译期类型检查的数据库访问，配合 **Redis** 实现分布式 Session 管理与身份认证；
+  开发 **Tauri + React + TypeScript** 跨平台桌面客户端，设计 `ApiResponse<T>` 泛型响应包装与自定义错误枚举。
+- 设计五类数据模型，通过 **6 个 PostgreSQL Trigger** 将聚合逻辑下沉至数据库层：自动维护推文热度指标（Engagement Rate）、
+  点赞/踩计数、用户名冗余填充及统计表（`user_stats`），保证数据一致性。
+- 开发多模态文件管理系统，基于 **SHA-256** 实现文件去重，支持 **HTTP Range** 分块流式传输；
+  构建 ML 推荐 pipeline，从用户统计表提取特征向量，通过外部推理服务获取个性化推文排序。
+
+=== 全栈电子商务订单管理系统 (Rails 8 Order System) #h(1fr) 2025/10 -- 2026/01
+*独立开发者* #h(1fr) 个人项目
+
+- 基于 **Ruby on Rails 8.1 + Hotwire (Turbo/Stimulus)** 构建全栈系统，使用 **Devise** 实现身份认证与角色权限（Admin/User），
+  集成 **Active Storage** 多模态上传与 **Action Text** 富文本编辑。
+- 采用 **Service Object** 模式封装业务逻辑（`CreateService` / `CancelService`），在事务中通过 **悲观锁**（`lock!`）
+  确保库存扣减与恢复的强一致性，避免超卖。
+- 实现 **到货通知机制**：通过 `after_update_commit` 回调监听库存从零恢复，触发 `ProductMailer` 异步邮件；
+  基于 `generates_token_for` 实现令牌化安全退订链接。
+- 使用 **Solid Queue** 处理异步邮件投递，配合 **Fragment Caching** 优化页面渲染，通过 **Kamal + Docker** 部署。
+
+// === Themis —— 极简主义沉浸式专注计时器 (iOS/SwiftUI) #h(1fr) 2026/01 -- 2026/02
+// *独立开发者* #h(1fr) 个人项目
+
+// - 基于 **SwiftUI** 构建响应式界面，通过目标时间差计算与 `Text(timerInterval:)` 实现系统级帧同步倒计时，解决后台挂起导致的计时漂移问题。
+// - 使用 **AVFoundation** 管理音频会话，实现“录音室静音”底噪与多应用音频混音；结合 **CoreHaptics** 提供沉浸式触觉反馈。
+// - 设计带“宽限期”的连续专注（Streak）算法，在保证公平性的同时提升用户长期留存。
+// - 采用 **UserDefaults + Codable** 构建轻量持久化层，实现任务历史与统计数据的毫秒级加载。
+
+
 == \u{e20f} 专业技能
 #style.chiline()
 
-// #lang_title("\u{e7a8}")[Rust & Actix Web & Axum & Rocket]
-=== \u{e7a8} Rust & Actix Web & Axum & Rocket
-- 基于 Rust 构建高并发微服务，利用 async/await 与 Actor 模型优化吞吐与延迟表现。
-- 深入理解 Ownership 与生命周期机制，结合 Serde 实现类型安全的序列化与并发安全保障。
-- 使用 SQLx / Diesel 实现类型安全的数据访问，配合 Validator 构建健壮的 RESTful API。
-- 熟悉 Axum 与 Rocket 中间件与 Extractor 机制，优化请求流水线与模块复用性。
+=== Python & Async Web
+- 基于 aiohttp / FastAPI 构建异步 Web 服务与 API 网关，熟悉中间件、SSE 流式推送与健康探针设计。
+- 熟练运用 asyncio 并发原语（Lock / Event / Semaphore），实践异步任务编排与资源生命周期管理。
+- 使用 Hydra / OmegaConf 构建声明式配置系统，结合 Jinja2 模板引擎实现配置渲染与注入。
 
-=== \u{e71d} Python & Django & Django REST framework
-- 基于 Django/DRF 构建 RESTful API，处理复杂序列化与资源路由。
-- 熟悉 MTV 架构与 ORM 机制，具备复杂关联查询与事务管理经验。
-- 实现基于权限系统与 JWT/OAuth2 的认证与访问控制。
-- 集成 Celery + Redis 处理异步任务，利用 Signals 实现模块解耦。
-
-=== \u{f07d3} Go & Gin
-- 基于 gRPC/Protobuf 构建微服务通信，结合 Consul/Etcd 实现服务发现与治理。
-- 使用 Gin 开发高并发 Web 服务，定制中间件优化请求链路。
-- 熟练运用 Goroutines/Channels 与 context 管理并发与生命周期。
-- 基于 Gorm 实现数据库访问，结合 Testify/Mock 构建可测试服务。
-
-=== \u{f0acf} Ruby & Ruby on Rails
-
-- 使用 Rails 完成数据库建模到业务交付的全栈开发。
-- 熟悉 ActiveRecord 查询优化、索引与缓存，解决 N+1 等性能问题。
-- 采用 RSpec 实践 TDD/BDD，保障 CI 环境下的代码稳定性。
+=== DevOps
+- 设计多阶段 GPU Docker 镜像构建流程，熟悉 CUDA/PyTorch 环境定制与远程调试部署。
+- 了解 Rust / Go / Ruby，具备多语言快速上手能力。
 
 === \u{e779} 日常工具
 - 熟练使用 \u{e632} *Emacs* /Vim、Org-mode 进行开发与文档管理。
