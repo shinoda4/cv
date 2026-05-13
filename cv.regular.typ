@@ -78,6 +78,7 @@
     align: (left + horizon, right + horizon, right + horizon),
     [
         = #box(baseline: 0.7em, image("rustacean-flat-happy.svg", height: 2em)) 林德松 Tesung Lin #box(baseline: 0.7em, image("Go.svg", height: 2em))
+        == \u{f450} 中国 \u{f444} 北京
     ],
     [
         #image("me.jpg", height: 8em)
@@ -123,7 +124,6 @@
 === 曲阜师范大学 软件工程 *学士*学位 #h(1fr) 2020/09 -- 2024/06
 - 课程：C/C++、数据结构、计算机组成原理、操作系统、计算机网络
 - 曾担任学院团委学生会#p_underline()[*副主席*]兼组织部部长
-
 
 == \u{f0b1} 实习经历
 #style.chiline()
@@ -175,7 +175,7 @@
 #style.chiline()
 
 === ComfyUI 云端推理网关与编排系统 (ComfyAgent / BizyEngine) #h(1fr) 2026/04 -- 至今
-*研发实习生* #h(1fr) 北京硅基流动科技
+*研发实习生* #h(1fr) 北京硅基流动科技有限公司
 
 - 基于 **aiohttp** 扩展 ComfyUI 服务端，开发社区模型/数据集管理 API 与 API Key 双来源认证，
   集成 GPT/Gemini/Kling/Sora 等第三方 AI 服务节点。
@@ -185,7 +185,7 @@
   设计三级健康探针（含队列深度感知），集成 **Prometheus** 监控。
 
 === ComfyUI 云环境管理与部署引擎 (CCE / BizyDeploy) #h(1fr) 2026/04 -- 至今
-*研发实习生* #h(1fr) 北京硅基流动科技
+*研发实习生* #h(1fr) 北京硅基流动科技有限公司
 
 - 设计多阶段 GPU Docker 镜像构建流程（PyTorch 2.5/2.9 + CUDA 12.4），开发插件仓库批量克隆
   与依赖自动合并解析，构建时间缩减约 40%；实现 HuggingFace / ModelScope 双源模型下载与完整性校验。
