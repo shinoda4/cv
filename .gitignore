@@ -3,3 +3,5 @@
 *.tex
 *~
 .DS_Store
+/output/
+/tmp/

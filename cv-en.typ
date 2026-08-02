@@ -103,18 +103,15 @@ R&D Intern #h(1fr) Beijing, China
 === Baichen Technology Co., Ltd. #h(1fr) 2025/12 -- 2026/03
 Backend Delivery Engineer / Technical Support #h(1fr) Beijing, China
 
-- Wrote architecture and feasibility sections for government and defense-sector technical proposals with high reliability and security requirements.
-- Delivered systems into isolated private networks, including physical server setup, Docker image migration, and database initialization.
-- Investigated production incidents and automated log inspection and backups with Shell scripts to improve on-site delivery efficiency.
+- Supported government and defense-sector proposals and private delivery into isolated networks, including server setup, Docker image migration, and database initialization.
+- Handled on-site support and incident response, automating log inspection and backups with Shell scripts.
 
-=== Shunde Machinery Parts Co., Ltd. #h(1fr) 2023/02 -- 2024/06
-Backend Engineer #h(1fr) Rizhao, Shandong, China
+=== #link("https://github.com/ShundeMachinery/")[Shunde Machinery Parts Co., Ltd.] #h(1fr) 2023/02 -- Present
+Technical Support (Long-term Part-time) #h(1fr) Rizhao, Shandong, China
 
-Developed and maintained internal inventory, order, and product-data modules operating on real production data.
-
-- Reimplemented a high-frequency inventory calculation in Rust and exposed it to Django through FFI after the original endpoint began timing out.
-- Traced API failures and data inconsistencies through application logs and database records, repaired historical data, and restored service availability.
-- Deployed Django behind Nginx and managed service processes with systemd for reliable internal access.
+- *Product catalog platform:* Independently delivered the product management console, showcase website, Spring Boot API, and iOS client, owning requirements, full-stack development, deployment, and long-term support.
+- *Core capabilities:* Modeled products, machine models, and fitment relationships for heavy-machinery parts, with search, image management, access control, and PostgreSQL backup and recovery.
+- *Core module rewrite (Rust FFI):* Reimplemented a high-frequency inventory calculation in Rust and exposed it to Django through FFI after the original endpoint began timing out.
 
 == \u{efbe} Projects
 #style.chiline()

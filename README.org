@@ -32,8 +32,13 @@ Windows: =winget install --id Typst.Typst=
 ** Compile and watch
 
 #+begin_src shell
-typst watch cv.regular.typ --font-path=fonts --font-path=typst-fonts --open
-typst watch cv-en.typ --font-path=fonts --font-path=typst-fonts --open
+just build       # Compile both Chinese and English resumes
+just open-zh     # Compile and open the Chinese resume
+just open-en     # Compile and open the English resume
+just watch-zh    # Recompile and preview Chinese changes
+just watch-en    # Recompile and preview English changes
+just clean       # Remove generated PDFs
+just --list      # Show all available recipes
 #+end_src
 
 ** Font

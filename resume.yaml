@@ -144,22 +144,23 @@ experience:
           en: "Handled on-site support and incident response, automating log inspection and backups with Shell scripts."
   - id: "shunde"
     company: {zh: "山东日照顺德机械配件有限公司", en: "Shunde Machinery Parts Co., Ltd."}
-    role: {zh: "技术支持 / 系统开发工程师", en: "Technical Support / Systems Developer"}
+    role: {zh: "技术支持（长期兼职）", en: "Technical Support (Long-term Part-time)"}
     location: {zh: "山东省日照市", en: "Rizhao, Shandong, China"}
-    period: "2023/02 - 2024/06"
+    period: {zh: "2023/02 - 至今", en: "2023/02 - Present"}
     url: "https://github.com/ShundeMachinery/"
     bullets:
-      - text:
-          zh: "独立开发并长期维护公司网站、产品管理系统与产品展示系统，负责需求沟通、功能实现、部署和日常技术支持。"
-          en: "Independently built and maintained the company website, product management system, and product showcase system, covering requirements, implementation, deployment, and day-to-day support."
+      - lead: {zh: "产品目录平台", en: "Product catalog platform"}
+        text:
+          zh: "独立完成产品管理后台、产品展示网站、Spring Boot API 与 iOS 客户端，负责需求沟通、全栈开发、部署及长期技术支持。"
+          en: "Independently delivered the product management console, showcase website, Spring Boot API, and iOS client, owning requirements, full-stack development, deployment, and long-term support."
+      - lead: {zh: "核心业务能力", en: "Core capabilities"}
+        text:
+          zh: "围绕工程机械配件建立产品、机型与适配关系数据模型，实现搜索筛选、图片管理、权限控制及 PostgreSQL 数据备份恢复。"
+          en: "Modeled products, machine models, and fitment relationships for heavy-machinery parts, with search, image management, access control, and PostgreSQL backup and recovery."
       - lead: {zh: "核心模块重构（Rust FFI）", en: "Core module rewrite (Rust FFI)"}
         text:
           zh: "针对高频物料库存计算导致的 Django 接口超时，使用 Rust 重写核心算法并封装为动态库。"
           en: "Reimplemented a high-frequency inventory calculation in Rust and exposed it to Django through FFI after the original endpoint began timing out."
-      - lead: {zh: "故障排查与数据修复", en: "Diagnostics and data repair"}
-        text:
-          zh: "结合应用日志与数据库记录定位接口异常和数据不一致，修复历史数据并恢复业务可用性。"
-          en: "Traced API failures and data inconsistencies through logs and database records, repaired historical data, and restored service availability."
 
 projects:
   - title: {zh: "MinuteX - AI 会议记录与知识沉淀客户端", en: "MinuteX - AI Meeting Intelligence Client"}
