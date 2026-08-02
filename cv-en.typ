@@ -35,10 +35,10 @@
   gutter: 1em,
   align: (left + horizon, right + horizon),
   [
-    = #box(baseline: 0.7em, image("rustacean-flat-happy.svg", height: 2em)) Tesung Lin #box(baseline: 0.7em, image("Go.svg", height: 2em))
+    = #box(baseline: 0.7em, image("assets/rustacean-flat-happy.svg", height: 2em)) Tesung Lin #box(baseline: 0.7em, image("assets/Go.svg", height: 2em))
     == \u{f450} China \u{f444} Beijing
   ],
-  [#image("me.jpg", height: 8em)],
+  [#image("assets/me.jpg", height: 8em)],
 )
 
 == \u{ef69} Profile
