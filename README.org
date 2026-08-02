@@ -32,11 +32,13 @@ Windows: =winget install --id Typst.Typst=
 ** Compile and watch
 
 #+begin_src shell
-just build       # Compile both Chinese and English resumes
+just build       # Compile Chinese, English, and GNU-style resumes
 just open-zh     # Compile and open the Chinese resume
 just open-en     # Compile and open the English resume
+just open-gnu    # Compile and open the GNU-style Chinese resume
 just watch-zh    # Recompile and preview Chinese changes
 just watch-en    # Recompile and preview English changes
+just watch-gnu   # Recompile and preview GNU-style changes
 just clean       # Remove generated PDFs
 just --list      # Show all available recipes
 #+end_src
