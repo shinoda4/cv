@@ -93,10 +93,8 @@
 FDE（Forward Deployed Engineer） #h(1fr) 北京市
 
 - *AI 产品端到端交付*：面向会议记录与智能阅读场景，将业务需求拆解为客户端、API 契约、网关和管理后台能力，负责方案设计、开发联调、测试发布与线上问题闭环。
-- *MinuteX / Readoow iOS*：基于 SwiftUI 与 gRPC 交付两款 iOS 应用；实现实时多说话人转写、可恢复摘要、录音回放、逐段编辑与声纹绑定，以及 AI 阅读、流式对话和学习成长功能。
-- *LLM Gateway*：维护 Rust 多模型网关，完善 OpenAI 兼容接口、模型/渠道路由、额度计费与用量统计；接入 TTS、声音复刻及 ASR 能力，并补齐管理 OpenAPI、集成测试和错误诊断。
-- *Platform Console*：基于 React / TypeScript 建设统一管理控制台，打通模型、令牌、用户、配额、调用日志与请求统计，支持分组权限、服务部署及网关问题定位。
-- *sync-k8s*：参与 Go 多集群 Kubernetes 管理平台交付，将集群资源持续镜像至 PostgreSQL，并提供资源检索、日志/终端/指标及 GitOps 发布与回滚能力。
+- *AI 客户端产品*：主力交付 MinuteX iOS / macOS 与 Readoow iOS，覆盖实时转写、会议纪要、声纹、AI 阅读和流式对话，并推动共享 Protobuf 契约在多端落地。
+- *平台与交付工具*：参与 Rust LLM 网关、React 管理台、Go 平台服务和 Kubernetes 运维系统建设，补齐模型接入、权限、镜像管理、部署及故障排查链路。
 
 #pagebreak()
 === 北京硅基流动科技有限公司 #h(1fr) 2026/03 -- 2026/06
@@ -126,40 +124,37 @@ FDE（Forward Deployed Engineer） #h(1fr) 北京市
 == \u{efbe} 项目经历
 #style.chiline()
 
-=== MinuteX —— AI 会议记录与知识沉淀客户端 #h(1fr) 2026/07 -- 至今
-*FDE / iOS 工程师* #h(1fr) 北京维度之门科技有限公司
+=== MinuteX / Readoow —— AI 会议与阅读客户端 #h(1fr) 2026/07 -- 至今
+*FDE / 客户端工程师* #h(1fr) 北京维度之门科技有限公司
 
-- 基于 SwiftUI、AVFoundation 与 gRPC 构建录音、实时多说话人转写和可恢复摘要链路，处理音频中断、后台运行、磁盘空间不足及写入失败等移动端异常场景。
-- 打通逐段转写编辑、摘要再生成、声纹注册与绑定、历史搜索和分享流程；集成统一 Protobuf 契约、结构化错误诊断与 TestFlight 发布脚本。
+- 主力开发 MinuteX iOS / macOS 与 Readoow iOS：完成录音、实时多说话人转写、可恢复摘要、声纹，以及 AI 阅读、流式对话和学习成长等核心流程。
+- 使用 SwiftUI、AVFoundation 与 gRPC 打通共享 Protobuf 契约和后端联调；重点处理音频中断、后台运行、数据恢复、接口升级及 TestFlight 发布等工程问题。
 
-=== LLM Gateway / Platform Console / sync-k8s —— 企业 AI 基础设施 #h(1fr) 2026/07 -- 至今
+=== LLM Gateway / Console / Image Hub —— AI 平台工具 #h(1fr) 2026/07 -- 至今
 *FDE / 全栈工程师* #h(1fr) 北京维度之门科技有限公司
 
-- 使用 Rust 构建 OpenAI 兼容的多模型接入与治理能力，覆盖模型/渠道路由、令牌、额度计费、用量聚合、调用日志，以及对话、TTS、声音复刻和 ASR 接口。
-- 使用 React / TypeScript 实现网关管理台与分组权限体系，提供模型与令牌配置、额度申请、用量趋势、请求诊断和服务部署入口，形成可运营、可排障的交付闭环。
-- 参与 Go + PostgreSQL Kubernetes 资源镜像与操作网关，支持 CRD 动态发现、OIDC 细粒度权限、实时运维操作，以及基于 Kustomize 的 GitOps 版本化发布与回滚。
+- 扩展 Rust LLM 网关，接入多家模型的对话、翻译、TTS、声音复刻和 ASR 能力，并完善渠道选择、额度统计、调用日志、错误诊断及 OpenAI 兼容接口。
+- 使用 React / TypeScript 与 Go 交付管理台和平台接口，完成模型、令牌、管理员、细粒度权限及镜像仓库管理，让配置、发布和问题定位能在同一入口完成。
 
-=== AX (锈羽) —— 全栈社交媒体与内容分发系统 #h(1fr) 2023/06 -- 2024/06
-*独立开发者* #h(1fr) 个人项目 (软件著作权 `2026SR0178137`)
+#pagebreak()
+=== sync-k8s / Deploy CLI —— Kubernetes 交付工具 #h(1fr) 2026/07 -- 至今
+*FDE / 工程工具开发* #h(1fr) 北京维度之门科技有限公司
 
-- 构建异步后端服务，开发数据库访问与分布式会话管理，设计统一响应包装与错误处理。
-- 设计数据模型与统计逻辑，维护推文热度、点赞/踩计数和用户统计一致性。
-- 开发多模态文件管理与推荐功能，支持文件去重、分块传输和个性化内容排序。
+- 参与 Go 多集群资源平台，完善用户组及资源级权限、审计和管理端接入；系统将集群资源同步至 PostgreSQL，并提供检索、日志、指标与 GitOps 发布能力。
+- 主力开发 Rust 命令行工具，覆盖资源查询、日志与事件查看、健康监控、发布预检、批量部署和回滚，便于在终端完成日常发布与故障排查。
+
+=== #link("https://github.com/desonglll/FocusBoard")[FocusBoard] —— macOS 智能任务管理工具 #h(1fr) 2026/08
+*独立开发者* #h(1fr) 个人项目
+
+- 使用原生 SwiftUI 构建三栏任务工作区，可从自然语言提取时间、优先级和执行步骤；支持 OpenAI 兼容服务，并在 AI 不可用时自动回退到本地规则。
+- 坚持本地优先：API Key 存入钥匙串，任务数据具备版本备份和损坏恢复，并为解析、状态流转、配置迁移及持久化补充回归测试。
 
 == \u{e20f} 专业技能
 #style.chiline()
 
-=== 客户端与实时通信
-- 熟悉 SwiftUI 状态管理、iOS 音频采集与生命周期治理；能够围绕中断恢复、后台运行和本地持久化设计稳定链路。
-- 使用 Protobuf / gRPC 维护跨端契约，具备流式响应、认证状态、结构化错误和接口兼容性治理经验。
-
-=== 后端与 AI 网关
-- 使用 Rust / Python 构建异步 API 与 LLM 网关，熟悉模型路由、流式推理、额度计费、用量统计和请求诊断。
-- 使用 PostgreSQL / Redis 进行数据建模与状态管理，关注事务一致性、查询性能和生产故障恢复。
-
-=== 工程交付
-- 基于 Docker / Kubernetes 完成服务部署与环境联调，使用 Shell 自动化构建、测试、发布及运行巡检。
-- 结构化 AI 协作：系统拆解需求、组织上下文并驱动跨栈实现，通过测试、审查与实机验证闭环交付。
+- *客户端与通信*：SwiftUI、iOS 音频与生命周期治理；Protobuf / gRPC 跨端契约、流式响应、认证与兼容性处理。
+- *后端与数据*：Rust / Python 异步 API 与 LLM 网关；PostgreSQL / Redis 数据建模、状态管理和故障恢复。
+- *工程交付*：Docker / Kubernetes 环境联调，Shell 自动化构建与发布；使用结构化 AI 协作加快跨栈实现，并通过测试、审查和实机验证结果。
 
 == \u{ed99} 学术与社会服务
 #style.chiline()

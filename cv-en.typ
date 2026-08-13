@@ -86,10 +86,8 @@
 FDE (Forward Deployed Engineer) #h(1fr) Beijing, China
 
 - *End-to-end AI delivery:* Translate meeting intelligence and AI reading requirements into client, API contract, gateway, and console capabilities; own solution design, implementation, integration, release, and production issue closure.
-- *MinuteX / Readoow iOS:* Deliver two SwiftUI and gRPC applications covering multi-speaker transcription, resumable summaries, recording playback, segment editing, voiceprints, AI reading, streaming chat, and learning journeys.
-- *LLM Gateway:* Maintain a Rust multi-provider gateway with OpenAI-compatible APIs, model/channel routing, quota billing, usage analytics, TTS, voice cloning, ASR, OpenAPI documentation, tests, and error diagnostics.
-- *Platform Console:* Build a React / TypeScript administration console for models, tokens, users, quotas, request logs, statistics, group authorization, service deployment, and gateway troubleshooting.
-- *sync-k8s:* Contribute to a Go multi-cluster Kubernetes platform that mirrors resources into PostgreSQL and provides resource search, logs, terminals, metrics, and GitOps deployment and rollback.
+- *AI client products:* Primary contributor to MinuteX for iOS / macOS and Readoow for iOS, covering live transcription, meeting summaries, voiceprints, AI reading, and streaming chat while integrating shared Protobuf contracts across clients.
+- *Platform and delivery tools:* Contribute across a Rust LLM gateway, React console, Go platform services, and Kubernetes operations tooling, closing gaps in model integration, access control, image management, deployment, and troubleshooting.
 
 #pagebreak()
 === SiliconFlow Technology Co., Ltd. #h(1fr) 2026/03 -- 2026/06
@@ -116,40 +114,37 @@ Technical Support (Long-term Part-time) #h(1fr) Rizhao, Shandong, China
 == \u{efbe} Projects
 #style.chiline()
 
-=== MinuteX - AI Meeting Intelligence Client #h(1fr) 2026/07 -- Present
-*FDE / iOS Engineer* #h(1fr) Beijing Dimension Gate Technology Co., Ltd.
+=== MinuteX / Readoow - AI Meeting and Reading Clients #h(1fr) 2026/07 -- Present
+*FDE / Client Engineer* #h(1fr) Beijing Dimension Gate Technology Co., Ltd.
 
-- Built recording, multi-speaker live transcription, and resumable summary flows with SwiftUI, AVFoundation, and gRPC; handled interruptions, background execution, low disk space, and write failures.
-- Delivered transcript segment editing, summary regeneration, voiceprint enrollment/binding, history search, and sharing; integrated shared Protobuf contracts, structured diagnostics, and TestFlight release automation.
+- Primary developer across MinuteX for iOS / macOS and Readoow for iOS, delivering recording, multi-speaker live transcription, resumable summaries, voiceprints, AI reading, streaming chat, and learning flows.
+- Used SwiftUI, AVFoundation, and gRPC to integrate shared Protobuf contracts and backend services; handled audio interruptions, background execution, data recovery, contract upgrades, and TestFlight releases.
 
-=== LLM Gateway / Platform Console / sync-k8s - AI Infrastructure #h(1fr) 2026/07 -- Present
+=== LLM Gateway / Console / Image Hub - AI Platform Tools #h(1fr) 2026/07 -- Present
 *FDE / Full-stack Engineer* #h(1fr) Beijing Dimension Gate Technology Co., Ltd.
 
-- Built Rust multi-model access and governance with OpenAI-compatible chat, TTS, voice cloning, and ASR APIs, plus routing, tokens, quota billing, usage aggregation, and request logs.
-- Delivered the React / TypeScript gateway console with group authorization, model/token configuration, quota requests, usage trends, diagnostics, and service deployment workflows.
-- Contributed to a Go and PostgreSQL Kubernetes mirror and operations gateway with dynamic CRD discovery, OIDC authorization, live operations, and versioned Kustomize GitOps deployment and rollback.
+- Extended a Rust LLM gateway with chat, translation, TTS, voice cloning, and ASR providers, plus channel selection, quota and usage tracking, request logs, diagnostics, and OpenAI-compatible APIs.
+- Delivered React / TypeScript administration flows and Go platform APIs for models, tokens, administrators, fine-grained permissions, and image repositories, bringing configuration, release, and troubleshooting into one console.
 
-=== AX - Full-stack Social and Content Distribution System #h(1fr) 2023/06 -- 2024/06
-*Independent Developer* #h(1fr) Software Copyright 2026SR0178137
+#pagebreak()
+=== sync-k8s / Deploy CLI - Kubernetes Delivery Tools #h(1fr) 2026/07 -- Present
+*FDE / Engineering Tools Developer* #h(1fr) Beijing Dimension Gate Technology Co., Ltd.
 
-- Built an asynchronous backend with database access, distributed sessions, unified responses, and structured error handling.
-- Designed data models and counters that preserve consistency for ranking, reactions, and user statistics.
-- Implemented multimodal file deduplication, chunked transfer, and personalized content ranking.
+- Contributed user groups, resource-level authorization, auditing, and management integration to a Go multi-cluster platform that mirrors Kubernetes resources into PostgreSQL for search, live operations, and GitOps delivery.
+- Primary developer of a Rust CLI for resource queries, logs and events, health monitoring, release preflight, batch deployment, and rollback, supporting day-to-day releases and incident diagnosis from the terminal.
+
+=== #link("https://github.com/desonglll/FocusBoard")[FocusBoard] - Smart macOS Task Manager #h(1fr) 2026/08
+*Independent Developer* #h(1fr) Personal Project
+
+- Built a native SwiftUI three-column workspace that turns natural language into scheduled, prioritized action steps; supports OpenAI-compatible services and falls back to local rules when AI is unavailable.
+- Kept data local with Keychain-protected API keys, versioned backups, corruption recovery, and regression tests for parsing, state transitions, configuration migration, and persistence.
 
 == \u{e20f} Professional Skills
 #style.chiline()
 
-=== Client and Real-time Communication
-- SwiftUI state management, iOS audio capture, lifecycle resilience, interruption recovery, background execution, and local persistence.
-- Cross-platform Protobuf / gRPC contracts, streaming responses, authentication state, structured errors, and compatibility management.
-
-=== Backend and AI Gateways
-- Asynchronous Rust / Python APIs and LLM gateways with model routing, streaming inference, billing, usage analytics, and diagnostics.
-- PostgreSQL / Redis data modeling and state management with attention to consistency, query performance, and production recovery.
-
-=== Engineering Delivery
-- Docker / Kubernetes deployment and environment integration, with Shell automation for builds, tests, releases, and operational checks.
-- Structured AI-assisted engineering: decompose requirements, organize context, drive cross-stack implementation, and close delivery through tests, code review, and device validation.
+- *Clients and communication:* SwiftUI, iOS audio and lifecycle resilience; cross-platform Protobuf / gRPC contracts, streaming responses, authentication, and compatibility handling.
+- *Backend and data:* Asynchronous Rust / Python APIs and LLM gateways; PostgreSQL / Redis data modeling, state management, and production recovery.
+- *Engineering delivery:* Docker / Kubernetes integration and Shell release automation; structured AI-assisted implementation validated through tests, code review, and device checks.
 
 == \u{ed99} Academic Service
 #style.chiline()
