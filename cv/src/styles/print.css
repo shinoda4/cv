@@ -1,0 +1,27 @@
+@media print {
+  :root, :root[data-theme] {
+    --page: #fff;
+    --ink: #111;
+    --body: #222;
+    --muted: #555;
+    --line: #ccc;
+    --accent: #111;
+    --body-size: 12px;
+    --small: 11px;
+    --heading-size: 18px;
+    --display-size: 28px;
+    color-scheme: light;
+  }
+  @page { size: A4; margin: 14mm; }
+  .site-header, .section-navigation, .skip-link, .site-footer { display: none; }
+  .resume { width: 100%; margin: 0; }
+  .profile-description { font-size: var(--body-size); }
+  .resume-section { margin-top: 20px; }
+  .resume-section h2 { break-after: avoid; font-size: var(--heading-size); }
+  .resume-entry { break-inside: avoid; }
+  .entry-heading { flex-direction: row; }
+  .entry-heading h3, .skills-list, .bullet-list { font-size: var(--body-size); }
+  .entry-meta, .repository-link, time { font-size: var(--small); }
+  .skills-list > div { grid-template-columns: 110px 1fr; }
+  a { text-decoration: none; }
+}

@@ -10,6 +10,18 @@ gnu_output := "cv.gnu.pdf"
 # Build all resumes.
 default: build
 
+# Run the web resume locally.
+web-dev:
+    cd cv && bun run dev
+
+# Check and build the web resume.
+web-check:
+    cd cv && bun run verify
+
+# Build the static web resume.
+web-build:
+    cd cv && bun run build
+
 # Build Chinese, English, and GNU-style PDFs.
 build: build-zh build-en build-gnu
 

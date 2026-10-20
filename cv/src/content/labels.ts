@@ -1,0 +1,28 @@
+export const labels = {
+  zh: {
+    title: 'FDE / 全栈工程师',
+    skip: '跳转到主要内容',
+    language: '语言',
+    dark: '切换深色外观',
+    light: '切换浅色外观',
+    darkLabel: '深色',
+    lightLabel: '浅色',
+    download: '下载 PDF',
+    navigation: '简历章节',
+    source: '简历源码',
+    top: '回到顶部',
+  },
+  en: {
+    title: 'FDE / Full-stack Engineer',
+    skip: 'Skip to content',
+    language: 'Language',
+    dark: 'Switch to dark theme',
+    light: 'Switch to light theme',
+    darkLabel: 'Dark',
+    lightLabel: 'Light',
+    download: 'Download PDF',
+    navigation: 'Résumé sections',
+    source: 'Résumé source',
+    top: 'Back to top',
+  },
+}

@@ -43,6 +43,21 @@ just clean       # Remove generated PDFs
 just --list      # Show all available recipes
 #+end_src
 
+** Web résumé
+
+网页版位于 =cv/=，直接读取 Typst 中英文简历，使用 React / TypeScript / Vite / Bun。
+
+#+begin_src shell
+cd cv
+bun install --frozen-lockfile
+bun run dev
+bun run verify
+#+end_src
+
+构建产物为 =cv/dist/=。内容维护和静态部署说明见 [[file:cv/README.md][网页版 README]]。
+
+GitHub Pages 工作流位于 =.github/workflows/pages.yml=：PR 检查构建，=main= 检查通过后发布，支持手动触发。首次使用在仓库 Settings → Pages 中将 Source 设为 GitHub Actions。
+
 ** Font
 
 The font I used is:

@@ -1,0 +1,47 @@
+:root {
+  --font: 'Iosevka', 'Sarasa Mono SC', 'Sarasa Term SC', 'Noto Sans Mono CJK SC', 'PingFang SC', monospace;
+  --page: #181818;
+  --ink: #e4e4ef;
+  --body: #c6c6c6;
+  --muted: #969696;
+  --line: #3b3b3b;
+  --accent: #73c936;
+  --small: 15px;
+  --body-size: 17px;
+  --heading-size: 24px;
+  --display-size: 38px;
+  font-family: var(--font);
+  font-size: var(--body-size);
+  color: var(--ink);
+  background: var(--page);
+  color-scheme: dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+:root[data-theme='light'] {
+  color-scheme: light;
+  --page: #f5f4ef;
+  --ink: #252525;
+  --body: #3d3d3d;
+  --muted: #65655e;
+  --line: #c9c9bc;
+  --accent: #326413;
+}
+* { box-sizing: border-box; }
+html { scroll-padding-top: 24px; }
+body { margin: 0; line-height: 1.85; }
+button, a { -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 4px; }
+button { font: inherit; cursor: pointer; color: var(--accent); border: 0; padding: 0; background: none; }
+button:hover { text-decoration: underline; text-underline-offset: 4px; }
+button:focus-visible, a:focus-visible { outline: 1px dashed var(--accent); outline-offset: 4px; }
+::selection { background: var(--accent); color: var(--page); }
+h1, h2, h3, p { margin: 0; }
+h1, h2, h3, strong { font-weight: 700; }
+strong { color: var(--ink); }
+time { font: var(--small)/1.85 var(--font); color: var(--muted); white-space: nowrap; }
+code { font: inherit; color: var(--ink); overflow-wrap: anywhere; }
+.skip-link { position: fixed; top: -70px; left: 20px; padding: 8px 14px; z-index: 100; background: var(--page); border: 1px solid var(--accent); }
+.skip-link:focus { top: 12px; }
